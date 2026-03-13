@@ -1,0 +1,3496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPINE: The Founder's Club | Networking • Wellbeing • Creative Hustle</title>
+    <meta name="description"
+        content="Step into SPINE: The Founder's Club at SNS Institutions – a networking-powered wellbeing arena where students and industry immerse in sport, fitness, gaming, entertainment, fashion, food, and coworking experiences.">
+    <meta name="keywords"
+        content="SPINE Founder's Club, SNS SPINE, Networking, Sports Facilities, Fitness Hub, Gaming Lounge, Entertainment Studio, Coworking, Design Thinking">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ==========================================================
+   SPINE: The Founder's Club Stylesheet
+   Redesigning Common Minds & Business through SPINE
+   ========================================================== */
+
+        :root {
+            --primary: #d91f4a;
+            --primary-dark: #9b1434;
+            --secondary: #1f8fff;
+            --accent: #f97316;
+            --dark: #0d1526;
+            --dark-elevated: rgba(13, 21, 38, 0.85);
+            --text-dark: #1c2439;
+            --text-muted: #64718b;
+            --surface: #ffffff;
+            --surface-alt: #f5f7fb;
+            --border: rgba(15, 23, 42, 0.08);
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --radius-sm: 10px;
+            --shadow-sm: 0 10px 25px -18px rgba(13, 21, 38, 0.35);
+            --shadow-md: 0 25px 55px -25px rgba(13, 21, 38, 0.45);
+            --shadow-lg: 0 40px 70px -30px rgba(13, 21, 38, 0.55);
+            --gradient-hero: radial-gradient(circle at 0% 0%, #ff7f50 0%, rgba(217, 31, 74, 0.9) 34%, #2b1f6d 100%);
+            --gradient-card: linear-gradient(135deg, rgba(217, 31, 74, 0.1) 0%, rgba(31, 143, 255, 0.08) 100%);
+            --gradient-pillars: linear-gradient(135deg, rgba(31, 143, 255, 0.12), rgba(217, 31, 74, 0.12));
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--surface);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        p {
+            color: var(--text-muted);
+        }
+
+        .section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .section-header {
+            max-width: 780px;
+            margin: 0 auto 3.5rem auto;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 2.8vw, 3.5rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, #d91f4a 0%, #1f8fff 100%) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            background-clip: text !important;
+            letter-spacing: -0.02em;
+            display: inline-block;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            margin-top: 1rem;
+            color: var(--text-muted);
+        }
+
+        /* Navigation */
+        .navbar {
+            padding: 1rem 0;
+            background: transparent;
+            transition: var(--transition);
+        }
+
+        .navbar-brand {
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .brand-logo {
+            height: 55px;
+            /* Adjusting for a premium, visible size */
+            width: auto;
+            object-fit: contain;
+            transition: var(--transition);
+        }
+
+        .navbar-scrolled {
+            background: rgba(2, 7, 23, 0.85) !important;
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.6rem 0;
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar-scrolled .brand-logo {
+            height: 48px;
+        }
+
+        .navbar .nav-link {
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.85) !important;
+            margin-left: 1.5rem;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .navbar .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            transition: var(--transition);
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color: #ffffff !important;
+        }
+
+        .navbar .nav-link:hover::after,
+        .navbar .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-btn-connect {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #ffffff !important;
+            padding: 0.6rem 2rem !important;
+            border-radius: 999px;
+            font-weight: 700 !important;
+            margin-left: 1.5rem;
+            transition: var(--transition);
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 15px rgba(217, 31, 74, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-btn-connect:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(217, 31, 74, 0.4);
+            color: #ffffff !important;
+        }
+
+        .nav-btn-connect::after {
+            display: none !important;
+        }
+
+        .navbar-scrolled {
+            background: rgba(13, 21, 38, 0.92) !important;
+            box-shadow: 0 10px 30px -20px rgba(13, 21, 38, 0.8);
+            backdrop-filter: blur(16px);
+        }
+
+        /* Premium Hero Section */
+        .hero-section {
+            min-height: 110vh;
+            padding: 8.5rem 0 10rem;
+            background: #020617;
+            /* Deepest Midnight */
+            position: relative;
+            color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-bg-glow {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(217, 31, 74, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(31, 143, 255, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
+            filter: blur(80px);
+            z-index: 0;
+        }
+
+        .hero-mesh-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            mask-image: radial-gradient(circle at center, black, transparent 80%);
+            z-index: 1;
+        }
+
+        .hero-image-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: url("Images/Spine.avif");
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            mix-blend-mode: luminosity;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.6rem 1.2rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 999px;
+            margin-bottom: 2.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .badge-icon {
+            color: var(--accent);
+            font-size: 0.9rem;
+            animation: pulse-light 2s infinite;
+        }
+
+        @keyframes pulse-light {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(1.2);
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(2.8rem, 5vw, 4.2rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .hero-subtitle {
+            display: block;
+            font-size: clamp(1.2rem, 1.8vw, 1.8rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #ffffff;
+            opacity: 0.95;
+            margin-top: 0.8rem;
+        }
+
+        .hero-lead {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 520px;
+            margin-bottom: 3.5rem;
+            line-height: 1.6;
+        }
+
+        /* Premium Buttons */
+        .hero-cta {
+            display: flex;
+            gap: 1.2rem;
+            margin-bottom: 4.5rem;
+        }
+
+        .btn-premium-primary {
+            background: #ffffff;
+            color: #020617;
+            border: none;
+            padding: 0.9rem 2.2rem;
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.95rem;
+            font-weight: 700;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px -10px rgba(255, 255, 255, 0.15);
+            transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        .btn-premium-primary:hover {
+            background: var(--primary);
+            color: #ffffff;
+            transform: translateY(-3px);
+        }
+
+        .btn-premium-outline {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            padding: 0.9rem 2.2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 10px;
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+        }
+
+        .btn-premium-outline:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #ffffff;
+            transform: translateY(-3px);
+        }
+
+        /* Trust Indicators */
+        .hero-trust-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4rem;
+            max-width: 900px;
+        }
+
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .trust-count {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1;
+        }
+
+        .trust-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: capitalize;
+            letter-spacing: 0.05em;
+            color: rgba(255, 255, 255, 0.45);
+            line-height: 1.6;
+        }
+
+        /* Hero Image */
+        /* Spatial Visualization */
+        .spatial-orbit {
+            position: relative;
+            width: 380px;
+            height: 380px;
+            margin: 0 auto;
+        }
+
+        .orbit-ring {
+            position: absolute;
+            inset: -40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: rotate-slow 40s linear infinite;
+        }
+
+        .orbit-center {
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1.5px solid rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            backdrop-filter: blur(24px);
+            box-shadow:
+                0 0 80px rgba(255, 255, 255, 0.1),
+                inset 0 0 30px rgba(255, 255, 255, 0.05);
+        }
+
+        .center-label-group {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0 1.2rem;
+        }
+
+        .center-label-main {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0.4));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient-spine {
+            background: linear-gradient(135deg, #d91f4a 0%, #1f8fff 100%) !important;
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            display: inline-block;
+        }
+
+        .center-label-sub {
+            font-size: 0.55rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: rgba(255, 255, 255, 0.4);
+            line-height: 1.5;
+        }
+
+        .center-label-sub span {
+            display: block;
+        }
+
+        .hud-card {
+            position: absolute;
+            padding: 0.8rem 1.4rem;
+            background: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            min-width: 180px;
+            box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.3);
+            animation: hud-float 6s ease-in-out infinite;
+            z-index: 10;
+        }
+
+        .hud-stat {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #ffffff;
+            line-height: 1;
+        }
+
+        .hud-performance {
+            top: 0;
+            right: -10%;
+            border-top: 1px solid #3b82f6;
+        }
+
+        .hud-network {
+            top: 92%;
+            left: -42%;
+            border-bottom: 1px solid #f97316;
+            animation-delay: -2s;
+        }
+
+        .hud-innovation {
+            top: 96%;
+            right: -38%;
+            border-right: 1px solid #10b981;
+            animation-delay: -4s;
+        }
+
+        .hud-icon {
+            width: 28px;
+            height: 28px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 0.8rem;
+            color: #ffffff;
+        }
+
+        @keyframes hud-float {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(-5px, -15px);
+            }
+        }
+
+        @keyframes rotate-slow {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        /* Scroll Wrapper */
+        .scroll-down-wrapper {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        .scroll-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.4);
+            transition: color 0.3s ease;
+        }
+
+        .scroll-text {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent);
+            animation: scroll-line-move 2s infinite;
+        }
+
+        @keyframes scroll-line-move {
+            0% {
+                transform: scaleY(0);
+                transform-origin: top;
+            }
+
+            50% {
+                transform: scaleY(1);
+                transform-origin: top;
+            }
+
+            51% {
+                transform: scaleY(1);
+                transform-origin: bottom;
+            }
+
+            100% {
+                transform: scaleY(0);
+                transform-origin: bottom;
+            }
+        }
+
+        /* Image Styles */
+        .section-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-md);
+            object-fit: cover;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .facility-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            margin-bottom: 1.2rem;
+        }
+
+        .testimonial-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid var(--primary);
+        }
+
+        .program-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            margin-bottom: 1.2rem;
+        }
+
+        .blueprint-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
+        }
+
+        /* Blueprint Section */
+        .blueprint-intro {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+        }
+
+        .blueprint-intro h3 {
+            font-size: 1.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 2rem 0;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .feature-list li {
+            display: flex;
+            gap: 0.8rem;
+            align-items: flex-start;
+            color: var(--text-muted);
+        }
+
+        .feature-list i {
+            color: var(--primary);
+            margin-top: 0.25rem;
+        }
+
+        .accent-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.55rem 1.4rem;
+            border-radius: 999px;
+            font-weight: 600;
+            background: rgba(217, 31, 74, 0.1);
+            color: var(--primary);
+        }
+
+        .blueprint-card {
+            background: var(--surface);
+            border-radius: var(--radius-md);
+            padding: 1.8rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(217, 31, 74, 0.15);
+            position: relative;
+            overflow: hidden;
+            min-height: 180px;
+            transition: var(--transition);
+        }
+
+        .blueprint-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-card);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 0;
+        }
+
+        .blueprint-card h4 {
+            position: relative;
+            z-index: 1;
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .blueprint-card p,
+        .blueprint-card .card-tag {
+            position: relative;
+            z-index: 1;
+        }
+
+        .blueprint-card .card-tag {
+            display: inline-flex;
+            margin-top: 1.2rem;
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            background: rgba(217, 31, 74, 0.12);
+        }
+
+        .blueprint-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .blueprint-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Program Section */
+        .programs-section {
+            background: var(--surface-alt);
+        }
+
+        .program-card {
+            height: 100%;
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 0;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            transition: var(--transition);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .program-card .program-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 0;
+            margin: 0;
+        }
+
+        .program-card h3,
+        .program-card ul,
+        .program-card span {
+            padding-left: 1.8rem;
+            padding-right: 1.8rem;
+        }
+
+        .program-card h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .program-card span.program-tag {
+            margin-bottom: 1.8rem;
+            margin-top: auto;
+            display: inline-block;
+            width: fit-content;
+        }
+
+        .program-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            border: 1px solid transparent;
+            background: linear-gradient(135deg, rgba(31, 143, 255, 0.18), rgba(217, 31, 74, 0.2));
+            mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .program-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            background: rgba(31, 143, 255, 0.15);
+            color: var(--secondary);
+            display: grid;
+            place-items: center;
+            font-size: 1.6rem;
+            margin-bottom: 1.4rem;
+        }
+
+        .program-card ul {
+            list-style: none;
+            display: grid;
+            gap: 0.7rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .program-card li {
+            color: var(--text-muted);
+        }
+
+        .program-tag {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            background: rgba(217, 31, 74, 0.1);
+            padding: 0.4rem 1.1rem;
+            border-radius: 999px;
+        }
+
+        .program-footer {
+            max-width: 860px;
+            margin: 3rem auto 0;
+            text-align: center;
+        }
+
+        .program-footer strong {
+            color: var(--primary);
+        }
+
+        /* Culture Section */
+        .culture-section {
+            background: radial-gradient(circle at top left, rgba(31, 143, 255, 0.08), transparent 55%);
+        }
+
+        .culture-highlight {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .culture-highlight h3 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-top: 1rem;
+        }
+
+        .culture-highlight p {
+            margin-top: 0.6rem;
+        }
+
+        .culture-timeline {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+
+        .culture-timeline::before {
+            content: "";
+            position: absolute;
+            left: 1.1rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, rgba(31, 143, 255, 0.35), rgba(217, 31, 74, 0.35));
+        }
+
+        .timeline-node {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding-left: 1rem;
+        }
+
+        .timeline-node:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-node::before {
+            content: "";
+            position: absolute;
+            left: -1.45rem;
+            top: 4px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 4px solid var(--secondary);
+        }
+
+        .timeline-time {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+            display: inline-block;
+        }
+
+        .timeline-content {
+            background: var(--surface);
+            border-radius: var(--radius-md);
+            padding: 1.2rem 1.8rem;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Pillars */
+        .pillars-section {
+            background: var(--surface-alt);
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .pillar-card {
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            padding: 2.2rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(31, 143, 255, 0.12);
+            transition: var(--transition);
+        }
+
+        .pillar-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-pillars);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 0;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .pillar-card:hover::before {
+            opacity: 1;
+        }
+
+        .pillar-number {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.6rem;
+            font-size: 2rem;
+            font-weight: 800;
+            color: rgba(13, 21, 38, 0.08);
+            z-index: 1;
+        }
+
+        .pillar-card h3,
+        .pillar-card p {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Facilities */
+        .facility-card {
+            background: var(--surface);
+            border-radius: var(--radius-md);
+            padding: 0;
+            border: 1px solid rgba(217, 31, 74, 0.12);
+            box-shadow: var(--shadow-sm);
+            text-align: left;
+            height: 100%;
+            transition: var(--transition);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .facility-card .facility-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .facility-card h4,
+        .facility-card p {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        .facility-card h4 {
+            margin-top: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .facility-card p {
+            margin-bottom: 1.5rem;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .facility-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            background: rgba(217, 31, 74, 0.12);
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .facility-highlight {
+            margin-top: 3rem;
+            padding: 1.6rem 2rem;
+            border-radius: var(--radius-md);
+            background: rgba(31, 143, 255, 0.08);
+            border: 1px dashed rgba(31, 143, 255, 0.3);
+            text-align: center;
+        }
+
+        /* Schedule */
+        .schedule-table {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .schedule-table thead {
+            background: rgba(13, 21, 38, 0.92);
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            padding: 1.2rem 1.4rem;
+            vertical-align: middle;
+        }
+
+        .schedule-table tbody tr:nth-child(even) {
+            background: rgba(31, 143, 255, 0.04);
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            background: radial-gradient(circle at right, rgba(217, 31, 74, 0.08), transparent 60%);
+        }
+
+        .testimonial-card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 2.2rem;
+            border: 1px solid rgba(31, 143, 255, 0.15);
+            box-shadow: var(--shadow-sm);
+            height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .testimonial-card::before {
+            content: "\201C";
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 6rem;
+            color: rgba(31, 143, 255, 0.12);
+        }
+
+        .testimonial-card p {
+            font-size: 1rem;
+            color: var(--text-dark);
+        }
+
+        .testimonial-name {
+            display: block;
+            margin-top: 1.4rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* Membership & Pathways */
+        .membership-section {
+            background: #ffffff;
+            position: relative;
+            padding: 8rem 0;
+        }
+
+        .membership-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            border: 1px solid rgba(13, 21, 38, 0.08);
+            box-shadow: 0 10px 30px -15px rgba(13, 21, 38, 0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .membership-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -20px rgba(13, 21, 38, 0.15);
+        }
+
+        .membership-card--highlight {
+            border: 2px solid var(--primary);
+            box-shadow: 0 25px 60px -20px rgba(217, 31, 74, 0.2);
+            transform: translateY(-16px);
+            z-index: 2;
+            background: linear-gradient(to bottom, #ffffff, rgba(217, 31, 74, 0.02));
+        }
+
+        .membership-card--highlight::before {
+            content: "Recommended Choice";
+            position: absolute;
+            top: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            background: #ffffff;
+            padding: 0.4rem 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(217, 31, 74, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .membership-card--highlight:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 30px 60px -25px rgba(217, 31, 74, 0.25);
+        }
+
+        .membership-card h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin: 0.5rem 0 0;
+            color: var(--dark);
+        }
+
+        .membership-card p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+
+        .membership-card ul {
+            list-style: none;
+            display: grid;
+            gap: 1rem;
+            padding-left: 1.5rem;
+            margin: 0.5rem 0;
+        }
+
+        .membership-card ul li {
+            position: relative;
+            font-size: 1rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .membership-card ul li::before {
+            content: "→";
+            position: absolute;
+            left: -1.5rem;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .membership-badge {
+            position: absolute;
+            top: -14px;
+            left: 24px;
+            padding: 0.4rem 1.4rem;
+            border-radius: 999px;
+            background: rgba(217, 31, 74, 0.1);
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            border: 1px solid rgba(217, 31, 74, 0.2);
+        }
+
+        .membership-card--highlight .membership-badge {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(217, 31, 74, 0.3);
+        }
+
+        .membership-card .btn {
+            margin-top: auto;
+            width: 100%;
+            padding: 1.1rem;
+            border-radius: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .membership-card .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border: none;
+            color: #ffffff;
+            box-shadow: 0 10px 20px -5px rgba(217, 31, 74, 0.3);
+        }
+
+        .membership-card .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px -8px rgba(217, 31, 74, 0.45);
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        }
+
+        .membership-card .btn-outline-primary {
+            background: transparent;
+            border: 2px solid rgba(13, 21, 38, 0.12);
+            color: var(--text-dark);
+        }
+
+        .membership-card .btn-outline-primary:hover {
+            background: var(--dark);
+            border-color: var(--dark);
+            color: #ffffff;
+            transform: translateY(-3px);
+        }
+
+        /* Contact */
+        /* Premium Contact Section Redesign */
+        .contact-section {
+            background: #020617;
+            /* Matches Hero Midnight */
+            position: relative;
+            padding: 10rem 0;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(217, 31, 74, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(31, 143, 255, 0.06) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1.5rem;
+            height: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            transition: var(--transition);
+            backdrop-filter: blur(8px);
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateX(10px);
+        }
+
+        .contact-item i {
+            font-size: 1.4rem;
+            color: #ffffff;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-item div h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-item div p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .map-wrapper {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 1rem;
+            height: 100%;
+            min-height: 400px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 40px 100px -30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .map-wrapper iframe {
+            border-radius: 16px;
+            width: 100%;
+            height: 100%;
+            filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);
+            /* Premium dark mode map theme */
+        }
+
+        @media (max-width: 992px) {
+            .map-wrapper {
+                min-height: 400px;
+                margin-top: 2rem;
+            }
+        }
+
+
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .invalid-feedback {
+            color: #ffe4e6;
+        }
+
+        /* Footer */
+        .footer {
+            background: #050a14;
+            padding: 1.8rem 0;
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .footer-copy {
+            margin: 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.6rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+        /* Utility animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Scrollbar styling */
+        *::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: var(--surface-alt);
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--secondary), var(--primary));
+            border-radius: 100px;
+        }
+
+        *::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
+        }
+
+        /* SPINE Innovation Pipeline Section */
+        .pipeline-section {
+            background: linear-gradient(135deg, rgba(248, 250, 252, 0.5), rgba(241, 245, 249, 0.8));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pipeline-card {
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(15, 23, 42, 0.06);
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pipeline-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .pipeline-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            transition: var(--transition);
+        }
+
+        .pipeline-icon--wellness {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+        }
+
+        .pipeline-icon--clarity {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        }
+
+        .pipeline-icon--creative {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+        }
+
+        .pipeline-icon--action {
+            background: linear-gradient(135deg, #14b8a6, #0d9488);
+        }
+
+        .pipeline-card:hover .pipeline-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .pipeline-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+
+        .pipeline-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+
+        /* Innovation-Enabled Facilities Section */
+        .facilities-innovation-section {
+            background: #ffffff;
+            position: relative;
+        }
+
+        .innovation-facility-card {
+            border-radius: var(--radius-lg);
+            padding: 0;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .innovation-facility-card .facility-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 0;
+            margin: 0;
+        }
+
+        .innovation-facility-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .innovation-facility-card--blue {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .innovation-facility-card--white {
+            background: #ffffff;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+        }
+
+        .innovation-facility-card--green {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .innovation-facility-card--purple {
+            background: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 100%);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .facility-icon-badge {
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            font-size: 1.6rem;
+            flex-shrink: 0;
+            background: #2563eb;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .facility-icon-badge--secondary {
+            background: #64748b;
+            box-shadow: 0 4px 12px rgba(100, 116, 139, 0.3);
+        }
+
+        .facility-icon-badge--green {
+            background: #10b981;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .facility-icon-badge--purple {
+            background: #8b5cf6;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+        }
+
+        .facility-content {
+            flex: 1;
+            padding: 1.8rem 2.2rem 2.2rem;
+        }
+
+        .facility-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.4rem;
+            color: var(--dark);
+        }
+
+        .facility-subtitle {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: var(--secondary);
+        }
+
+        .facility-description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+        }
+
+        .facility-metrics {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 0.8rem;
+            border-top: 1px solid rgba(15, 23, 42, 0.1);
+        }
+
+        .metric-label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .metric-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .innovation-facility-card--blue .metric-value {
+            color: #2563eb;
+        }
+
+        .innovation-facility-card--green .metric-value {
+            color: #10b981;
+        }
+
+        .innovation-facility-card--purple .metric-value {
+            color: #8b5cf6;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1200px) {
+            .hero-title {
+                font-size: clamp(1rem, 5vw, 2rem);
+            }
+
+            .hero-image-wrapper {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .navbar-scrolled {
+                padding: 0.4rem 0;
+            }
+
+            .navbar-collapse {
+                background: rgba(2, 7, 23, 0.98);
+                margin-top: 1rem;
+                padding: 1.5rem;
+                border-radius: 20px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(20px);
+            }
+
+            .navbar .nav-link {
+                margin-left: 0;
+                padding: 0.8rem 0;
+            }
+
+            .hero-section {
+                padding: 7rem 0 16rem;
+                /* Increased significantly to house the orbit + scroll text */
+                min-height: 130vh;
+                /* Increased for better vertical distribution */
+                text-align: center;
+            }
+
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-lead {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .hero-trust-row {
+                justify-content: center;
+                margin: 0 auto;
+                gap: 2rem;
+            }
+
+            .hero-visual-container {
+                padding-left: 0;
+                margin-top: 4rem;
+                display: flex;
+                justify-content: center;
+            }
+
+            .hero-image-wrapper {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 5rem 0;
+            }
+
+            .section-header {
+                margin-bottom: 2.5rem;
+            }
+
+            .hero-title {
+                font-size: clamp(1.4rem, 6.5vw, 2.2rem);
+                white-space: nowrap;
+                letter-spacing: -0.02em;
+            }
+
+            .hero-title br {
+                display: none;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+                margin-top: 0.5rem;
+            }
+
+            .hero-lead {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                margin-bottom: 2.5rem;
+                color: rgba(255, 255, 255, 0.7);
+            }
+
+            .spatial-orbit {
+                transform: scale(0.75);
+                margin-top: -20px;
+                margin-bottom: -20px;
+            }
+
+            .center-label-main {
+                font-size: 2.5rem;
+            }
+
+            .center-label-sub {
+                font-size: 0.45rem;
+            }
+
+            .hero-visual-container {
+                margin-top: 1rem;
+            }
+
+            .hero-trust-row {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            .trust-item {
+                align-items: center;
+            }
+
+            .membership-card--highlight {
+                transform: none;
+                margin: 1rem 0;
+            }
+
+            .membership-card--highlight::before {
+                display: none;
+                /* Hide on mobile to save space */
+            }
+
+            .map-wrapper {
+                padding: 0.8rem;
+                margin-top: 3rem;
+                min-height: 350px;
+            }
+
+            .contact-item {
+                padding: 1.2rem;
+            }
+
+            .innovation-facility-card {
+                margin-bottom: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: clamp(1.8rem, 8vw, 2.8rem);
+                white-space: normal;
+                line-height: 1.2;
+            }
+
+            .spatial-orbit {
+                transform: scale(0.65);
+                margin-top: -60px;
+                margin-bottom: -60px;
+            }
+
+            .hero-badge .badge-text {
+                font-size: 0.65rem;
+            }
+
+            .hud-card {
+                min-width: 140px;
+                padding: 0.6rem 1rem;
+            }
+
+            .hud-performance {
+                right: 0%;
+            }
+
+            .hud-network {
+                left: -15%;
+            }
+
+            .hud-innovation {
+                right: -15%;
+            }
+
+            .hero-badge {
+                font-size: 0.7rem;
+                padding: 0.5rem 1rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .btn-premium-primary,
+            .btn-premium-outline {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-visual-container {
+                margin-top: 4rem;
+                margin-bottom: 2rem;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .hero-image-wrapper {
+                max-width: 100%;
+            }
+
+            .culture-timeline {
+                padding-left: 1.5rem;
+            }
+
+            .culture-highlight {
+                padding: 1.5rem;
+            }
+
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .facility-card {
+                padding: 1.5rem;
+            }
+
+            .nav-btn-connect {
+                margin-left: 0;
+                margin-top: 1rem;
+                width: 100%;
+            }
+
+            .membership-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .membership-card h3 {
+                font-size: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .contact-item i {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Floating Widgets */
+        .floating-widgets {
+            position: fixed;
+            bottom: 2.5rem;
+            right: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            z-index: 9999;
+        }
+
+        .float-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: #ffffff !important;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .float-btn:hover {
+            transform: scale(1.15) translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+        }
+
+        .float-whatsapp {
+            background-color: #25D366;
+        }
+
+        .float-instagram {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+
+        @media (max-width: 576px) {
+            .floating-widgets {
+                bottom: 2rem;
+                right: 1.5rem;
+                gap: 1rem;
+            }
+
+            .float-btn {
+                width: 52px;
+                height: 52px;
+                font-size: 1.5rem;
+            }
+        }
+
+        /* ==========================================================
+           Contact Page Specific Styles
+           ========================================================== */
+        .breadcrumb-header {
+            background: var(--dark);
+            position: relative;
+            padding: 8.5rem 0 3.5rem;
+            text-align: left;
+            margin-top: 0;
+            overflow: hidden;
+        }
+
+        .breadcrumb-header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 0% 0%, rgba(217, 31, 74, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(31, 143, 255, 0.12) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .breadcrumb-header .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .breadcrumb-header h1 {
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        .breadcrumb-nav {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            font-weight: 500;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+
+        .breadcrumb-nav a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb-nav a:hover {
+            color: var(--primary);
+        }
+
+        .breadcrumb-sep {
+            opacity: 0.5;
+        }
+
+        .breadcrumb-active {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .contact-content-view {
+            padding: 6rem 0;
+            background: var(--surface);
+        }
+
+        .info-item-v2 {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .info-icon-v2 {
+            width: 56px;
+            height: 56px;
+            background: rgba(217, 31, 74, 0.08);
+            color: var(--primary);
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            font-size: 1.4rem;
+            transition: var(--transition);
+        }
+
+        .form-container-v2 {
+            background: var(--surface);
+            padding: 3.5rem;
+            border-radius: 24px;
+            box-shadow: 0 40px 80px -20px rgba(13, 21, 38, 0.12);
+            border: 1px solid var(--border);
+        }
+
+        .btn-apply-v2 {
+            width: 100%;
+            background: var(--dark);
+            color: #ffffff;
+            padding: 1.2rem;
+            border-radius: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            border: none;
+            margin-top: 1rem;
+            transition: var(--transition);
+        }
+
+        .btn-apply-v2:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        #contact-page-view {
+            display: none;
+        }
+
+        /* ================= BITRIX FORM STYLES ================= */
+        .b24-form-wrapper,
+        .b24-form-content,
+        .b24-form-content.b24-form-padding-side,
+        .b24-window-popup,
+        .b24-window-scrollable {
+            background: transparent !important;
+            box-shadow: none !important;
+            border: none !important;
+        }
+
+        .b24-form-header {
+            padding: 0 0 20px !important;
+            text-align: left !important;
+            margin-bottom: 10px !important;
+        }
+
+        .b24-form-header-title {
+            font-size: 28px !important;
+            font-weight: 700 !important;
+            color: var(--dark) !important;
+            font-family: 'Space Grotesk', sans-serif !important;
+        }
+
+        .b24-form-header-description {
+            display: none !important;
+        }
+
+        .b24-form-wrapper {
+            max-width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .b24-form-field {
+            margin-bottom: 22px !important;
+        }
+
+        .b24-form-control-label {
+            position: absolute !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+        .b24-form-control {
+            width: 100% !important;
+            height: 56px !important;
+            padding: 0 18px !important;
+            background: #f8fafc !important;
+            border: 1px solid var(--border) !important;
+            border-radius: 14px !important;
+            font-size: 15px !important;
+            color: var(--dark) !important;
+            font-family: 'Inter', sans-serif !important;
+            box-shadow: none !important;
+        }
+
+        .b24-form-control::placeholder {
+            color: var(--text-muted) !important;
+            opacity: 0.7 !important;
+            font-weight: 500 !important;
+        }
+
+        .b24-form-control:focus {
+            border-color: var(--primary) !important;
+            background: #ffffff !important;
+            box-shadow: 0 0 0 4px rgba(217, 31, 74, 0.05) !important;
+        }
+
+        .b24-form-btn {
+            width: 100% !important;
+            margin-top: 28px !important;
+            height: 60px !important;
+            border-radius: 16px !important;
+            background: var(--primary) !important;
+            color: #ffffff !important;
+            font-size: 17px !important;
+            font-weight: 700 !important;
+            border: none !important;
+            text-transform: uppercase !important;
+            transition: var(--transition) !important;
+            font-family: 'Space Grotesk', sans-serif !important;
+            letter-spacing: 0.05em !important;
+        }
+
+        .b24-form-btn:hover {
+            transform: translateY(-2px) !important;
+            background: var(--primary-dark) !important;
+            box-shadow: 0 12px 24px -6px rgba(217, 31, 74, 0.35) !important;
+        }
+
+        .b24-form-sign {
+            display: none !important;
+        }
+
+        .form-container-v2 h2 {
+            font-size: 1.75rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" aria-label="SPINE primary navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#home" aria-label="SPINE Founder's Club home">
+                <img src="https://cdn.bitrix24.com/b11752903/landing/f1b/f1b86c7e95da767b0bb0343f30984c67/sns_spine_top_banner_corrected3_1x.png"
+                    alt="SNS SPINE Logo" class="brand-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blueprint">Founder's Blueprint</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#programs">Activations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#culture">3P Culture</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pillars">5 Pillars</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#facilities">Spaces</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#schedule">Pulse</a></li>
+                    <li class="nav-item"><a class="nav-link nav-btn-connect" href="#contact-us">Connect</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="main-page-view">
+
+        <header id="home" class="hero-section">
+            <div class="hero-image-overlay"></div>
+            <div class="hero-bg-glow"></div>
+            <div class="hero-mesh-overlay"></div>
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="hero-content">
+                            <div class="hero-badge fade-up">
+                                <span class="badge-icon"><i class="fa-solid fa-sparkles"></i></span>
+                                <span class="badge-text">REDESIGNING COMMON MINDS & BUSINESS</span>
+                            </div>
+                            <h1 class="hero-title fade-up" style="font-weight: 900;">
+                                <span class="text-gradient-spine">SPINE:</span> The Founder's Club
+                                <br><span class="hero-subtitle">Lifestyle Lab for Relentless Hustlers</span>
+                            </h1>
+                            <p class="hero-lead fade-up">A networking-powered forum where students, founders, and
+                                industry
+                                allies collide through sport, fitness, gaming, fashion, food, and coworking rituals.
+                                This is
+                                the lifestyle spine that keeps Purpose, Process, and People flexible, focused, and
+                                future-ready.</p>
+
+                            <div class="hero-cta fade-up">
+                                <a class="btn btn-premium-primary" href="#facilities">
+                                    <span>Tour the Spaces</span>
+                                    <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                                </a>
+                                <a class="btn btn-premium-outline" href="#book-visit">
+                                    <i class="fa-solid fa-calendar-check me-2"></i>
+                                    <span>Schedule a Club Visit</span>
+                                </a>
+                            </div>
+
+                            <div class="hero-trust-row fade-up">
+                                <div class="trust-item">
+                                    <span class="trust-count">52</span>
+                                    <span class="trust-label">Industry collisions hosted each week</span>
+                                </div>
+                                <div class="trust-item">
+                                    <span class="trust-count">7 + 7</span>
+                                    <span class="trust-label">Innovation Tech & Industry Ecosystems</span>
+                                </div>
+                                <div class="trust-item">
+                                    <span class="trust-count">3P</span>
+                                    <span class="trust-label">Culture: Purpose • Process • People</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="spatial-orbit">
+                            <div class="orbit-ring"></div>
+                            <div class="orbit-center">
+                                <div class="center-label-group">
+                                    <span class="center-label-main">SPINE</span>
+                                    <div class="center-label-sub">
+                                        <span>STRENGTH • PERFORMANCE • INNOVATION</span>
+                                        <span>NETWORKING • EXPERIENCE</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hud-card hud-performance">
+                                <span class="hud-stat">Industry Connect</span>
+                            </div>
+                            <div class="hud-card hud-network">
+                                <span class="hud-stat">Performance Arenas</span>
+                            </div>
+                            <div class="hud-card hud-innovation">
+                                <span class="hud-stat">Creative Studios</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down-wrapper">
+                <a href="#innovation-pipeline" class="scroll-link">
+                    <span class="scroll-text">Explore Pipeline</span>
+                    <div class="scroll-line"></div>
+                </a>
+            </div>
+        </header>
+
+        <!-- SPINE Innovation Pipeline Section -->
+        <section id="innovation-pipeline" class="section pipeline-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">The <span class="text-gradient-spine">SPINE</span> Innovation Pipeline
+                    </h2>
+                    <p class="section-subtitle">Our scientifically-proven methodology transforms physical wellness into
+                        entrepreneurial excellence through systematic cognitive enhancement</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="pipeline-card">
+
+                            <h3>Physical Wellness</h3>
+                            <p>Enhanced cardiovascular health and neuroplasticity through targeted activities</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="pipeline-card">
+
+                            <h3>Mental Clarity</h3>
+                            <p>Improved focus, decision-making, and problem-solving capabilities</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="pipeline-card">
+
+                            <h3>Creative Thinking</h3>
+                            <p>Unleashed innovation potential through neurochemical optimization</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="pipeline-card">
+
+                            <h3>Entrepreneurial Action</h3>
+                            <p>Systematic startup creation with measurable success metrics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Innovation-Enabled Facilities Section -->
+        <section id="innovation-facilities" class="section facilities-innovation-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Innovation-Enabled Facilities</h2>
+                    <p class="section-subtitle">Each facility is designed as a startup success catalyst, backed by
+                        neuroscience and proven methodologies</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="innovation-facility-card innovation-facility-card--blue">
+                            <img src="Images/Swim.jpeg" alt="The Deep Think Tank swimming pool facility"
+                                class="facility-image" loading="lazy">
+
+                            <div class="facility-content">
+                                <h3>The Deep Think Tank</h3>
+                                <p class="facility-subtitle">Swimming Pool Complex</p>
+                                <p class="facility-description">Where breakthrough ideas surface. Swimming activates the
+                                    default mode network, leading to 73% more innovative solutions per session.</p>
+                                <div class="facility-metrics">
+                                    <span class="metric-label">Innovation Metrics</span>
+                                    <span class="metric-value">+73% Ideas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="innovation-facility-card innovation-facility-card--white">
+                            <img src="Images/Gym.jpg" alt="Strength & Strategy Center gymnasium" class="facility-image"
+                                loading="lazy">
+
+                            <div class="facility-content">
+                                <h3>Strength & Strategy Center</h3>
+                                <p class="facility-subtitle">Gymnasium</p>
+                                <p class="facility-description">Building physical and business resilience
+                                    simultaneously.
+                                    Resistance training correlates with 65% higher persistence in startup challenges.
+                                </p>
+                                <div class="facility-metrics">
+                                    <span class="metric-label">Resilience Boost</span>
+                                    <span class="metric-value">+65% Persistence</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="innovation-facility-card innovation-facility-card--green">
+                            <img src="Images/Music.jpg" alt="Creative Expression Lab music studio"
+                                class="facility-image" loading="lazy">
+
+                            <div class="facility-content">
+                                <h3>Creative Expression Lab</h3>
+                                <p class="facility-subtitle">Music & Recording Studio</p>
+                                <p class="facility-description">Unlocking innovative thinking through arts. Musical
+                                    training
+                                    increases entrepreneurial creativity by 89% and pattern recognition skills.</p>
+                                <div class="facility-metrics">
+                                    <span class="metric-label">Creativity Index</span>
+                                    <span class="metric-value">+89% Innovation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="innovation-facility-card innovation-facility-card--purple">
+                            <img src="Images/Gaming.jpg" alt="Strategy Gaming Center entertainment hub"
+                                class="facility-image" loading="lazy">
+
+                            <div class="facility-content">
+                                <h3>Strategy Gaming Center</h3>
+                                <p class="facility-subtitle">Gaming & Entertainment Hub</p>
+                                <p class="facility-description">Developing strategic thinking and quick decision-making.
+                                    Gaming correlates with 82% faster business pivot decisions and risk assessment.</p>
+                                <div class="facility-metrics">
+                                    <span class="metric-label">Decision Speed</span>
+                                    <span class="metric-value">+82% Faster</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blueprint" class="section blueprint-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">The Founder's Blueprint</h2>
+                    <p class="section-subtitle">The SNS SPINE infrastructure that fuses networking, wellbeing, and
+                        venture
+                        hustle into everyday campus life.</p>
+                </div>
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-5">
+                        <article class="blueprint-intro h-100">
+                            <h3><span class="text-gradient-spine">SPINE</span> flexes like the founder's own backbone –
+                                agile, resilient, and always connected.
+                            </h3>
+                            <p>The Founder's Club is Coimbatore's most energetic social arena where industry captains,
+                                alumni founders, and student talent sprint together. From sunrise swim meets to midnight
+                                pitch scrums, every corner is wired to build lifestyle discipline, creative confidence,
+                                and
+                                entrepreneurial serendipity.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-circle-dot"></i> Live dashboards mapping wellbeing, skill gains,
+                                    and
+                                    network density.</li>
+                                <li><i class="fas fa-circle-dot"></i> Rituals that blend physical hustle, mindful
+                                    recovery,
+                                    and venture storytelling.</li>
+                                <li><i class="fas fa-circle-dot"></i> Direct pipelines into SHAAARP industries and
+                                    RADICAL
+                                    technology studios.</li>
+                            </ul>
+                            <div class="accent-badge">Founder's Club = Hustle • Heart • High-Impact Networks</div>
+                        </article>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row g-4">
+                            <div class="col-sm-6">
+                                <div class="blueprint-card">
+                                    <img src="Images/Cricket.jpg" alt="Sports Spine facilities" class="blueprint-image"
+                                        loading="lazy">
+                                    <h4>Sports Spine</h4>
+                                    <p>Cricket bowling labs, 5s football turf, tennis & shuttle courts fueling grit and
+                                        gameplay strategy.</p>
+                                    <span class="card-tag">Performance Play</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="blueprint-card">
+                                    <img src="Images/Fitness.jpg" alt="Fitness Forge center" class="blueprint-image"
+                                        loading="lazy">
+                                    <h4>Fitness Forge</h4>
+                                    <p>Indoor track, cardio zone, strength rigs, and stretch suites fine-tuning founder
+                                        stamina.</p>
+                                    <span class="card-tag">Physical Vitality</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="blueprint-card">
+                                    <img src="Images/Gaming Loft.jpg" alt="Gaming Loft lounge" class="blueprint-image"
+                                        loading="lazy">
+                                    <h4>Gaming Loft</h4>
+                                    <p>Pool battles, air hockey playoffs, and arcade shootouts igniting friendly
+                                        competition
+                                        & quick thinking.</p>
+                                    <span class="card-tag">Cognitive Agility</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="blueprint-card">
+                                    <img src="Images/dance.jpg" alt="Creator District arts studio"
+                                        class="blueprint-image" loading="lazy">
+                                    <h4>Creator District</h4>
+                                    <p>Theatre, dance, music & recording studios, art bays, and fashion closets for
+                                        expressive storytelling.</p>
+                                    <span class="card-tag">Creative Energy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="programs" class="section programs-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Club Activations & Rituals</h2>
+                    <p class="section-subtitle">Purpose-led sessions combining the 5 Pillars with real-world founder
+                        hustle.
+                    </p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="program-card">
+                            <img src="Images/Swim.jpeg" alt="Founder Warm-Up morning fitness" class="program-image"
+                                loading="lazy">
+
+                            <h3>Founder Warm-Up</h3>
+                            <ul>
+                                <li>Swim lanes & sunrise track sprints</li>
+                                <li>Mobility and breath-focus resetting posture</li>
+                                <li>Purpose journaling with mentor prompts</li>
+                            </ul>
+                            <span class="program-tag">Daily • 6:00 AM</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="program-card">
+                            <img src="Images/Hustle Hours.jpg" alt="Hustle Hours collaborative networking"
+                                class="program-image" loading="lazy">
+
+                            <h3>Hustle Hours</h3>
+                            <ul>
+                                <li>Low-code & GenAI sprints with industry captains</li>
+                                <li>Design thinking jams anchored in 3P rituals</li>
+                                <li>Networking cafés with SHAAARP insiders</li>
+                            </ul>
+                            <span class="program-tag">Tue & Thu • 4:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="program-card">
+                            <img src="Images/9.jpg" alt="Night League evening sports" class="program-image"
+                                loading="lazy">
+
+                            <h3>Night League</h3>
+                            <ul>
+                                <li>Beach volleyball & 5s football under lights</li>
+                                <li>Gaming face-offs & creative battles</li>
+                                <li>Recovery pods with sound bath cooldowns</li>
+                            </ul>
+                            <span class="program-tag">Weekend Spotlights</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-footer">
+                    <p><strong>Industry immersion:</strong> Every activation syncs with SHAAARP sectors – from Smart
+                        Manufacturing and Healthcare to SportsTech and BFSI – turning lifestyle habits into venture
+                        momentum.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="culture" class="section culture-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">3P Culture in Motion</h2>
+                    <p class="section-subtitle">Purpose. Process. People. The muscle memory behind every founding
+                        journey.
+                    </p>
+                </div>
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-5">
+                        <div class="culture-highlight">
+                            <img src="https://photos.velzx.com/wp-content/uploads/2026/02/1752750867452.jpeg"
+                                alt="3P Culture in motion - Purpose, Process, People" class="section-image"
+                                style="margin-bottom: 2rem;" loading="lazy">
+                            <h3>Purpose</h3>
+                            <p>Every day opens with intention mapping – why does today's hustle matter for community,
+                                career, and the 1000 startup mission?</p>
+                            <h3>Process</h3>
+                            <p>Design thinking frameworks, data-led feedback, and reflective storytelling sharpen
+                                execution
+                                discipline.</p>
+                            <h3>People</h3>
+                            <p>Club captains, alumni CEOs, athletes, and wellbeing guides create a circle of sincerity,
+                                nobility, and service.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="culture-timeline">
+                            <div class="timeline-node">
+                                <span class="timeline-time">07:00</span>
+                                <div class="timeline-content">
+                                    <h4>Purpose Pulse</h4>
+                                    <p>Swim & strategy huddle aligning personal OKRs with SNS innovation priorities.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-node">
+                                <span class="timeline-time">13:00</span>
+                                <div class="timeline-content">
+                                    <h4>Process Power-Up</h4>
+                                    <p>Rapid prototyping labs, low-code clinics, and growth storytelling circles.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-node">
+                                <span class="timeline-time">18:30</span>
+                                <div class="timeline-content">
+                                    <h4>People Pods</h4>
+                                    <p>Sports leagues, fashion pop-ups, and founder café dialogues with industry
+                                        mentors.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline-node">
+                                <span class="timeline-time">21:00</span>
+                                <div class="timeline-content">
+                                    <h4>Reflection Huddles</h4>
+                                    <p>Acoustic jam, gratitude journaling, and tomorrow's playbook reset.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pillars" class="section pillars-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Five Pillars of Excellence</h2>
+                    <p class="section-subtitle">The lattice that sustains every Founder's Club experience.</p>
+                </div>
+                <div class="pillars-grid">
+                    <article class="pillar-card" aria-labelledby="pillar-learning">
+                        <span class="pillar-number">01</span>
+                        <h3 id="pillar-learning">Learning</h3>
+                        <p>Immersive bootcamps and masterclasses translating design thinking into daily practice.</p>
+                    </article>
+                    <article class="pillar-card" aria-labelledby="pillar-upskilling">
+                        <span class="pillar-number">02</span>
+                        <h3 id="pillar-upskilling">Upskilling & Communication</h3>
+                        <p>Pitch studios, influence labs, and cross-cultural exchanges elevating founder storytelling.
+                        </p>
+                    </article>
+                    <article class="pillar-card" aria-labelledby="pillar-innovation">
+                        <span class="pillar-number">03</span>
+                        <h3 id="pillar-innovation">Innovation</h3>
+                        <p>RADICAL technology playgrounds spanning Robotics, AR/VR, AI/ML, IoT, Cybersecurity, and more.
+                        </p>
+                    </article>
+                    <article class="pillar-card" aria-labelledby="pillar-networking">
+                        <span class="pillar-number">04</span>
+                        <h3 id="pillar-networking">Networking</h3>
+                        <p>Industry conclaves, investor lounges, and SHAAARP clinics building durable alliances.</p>
+                    </article>
+                    <article class="pillar-card" aria-labelledby="pillar-character">
+                        <span class="pillar-number">05</span>
+                        <h3 id="pillar-character">Character Building</h3>
+                        <p>Service missions, athletic grit drills, and wellbeing rituals strengthening empathy and
+                            resilience.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="facilities" class="section facilities-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Spaces that Breathe Possibility</h2>
+                    <p class="section-subtitle">Every zone is engineered for lifestyle agility, founder focus, and
+                        network
+                        collisions.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-4">
+                        <div class="facility-card">
+                            <img src="Images/Cricket.jpg" alt="Sports Spine facilities" class="facility-image"
+                                loading="lazy">
+
+                            <h4>Sports Spine</h4>
+                            <p>Cricket bowling alleys, tennis & shuttle courts, beach volleyball, and 5s football
+                                arenas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="facility-card">
+                            <img src="Images/Indoor Running.jpg" alt="Fitness Forge center" class="facility-image"
+                                loading="lazy">
+
+                            <h4>Fitness Forge</h4>
+                            <p>Indoor running track, cardio bays, strength rigs, weight training zones, and stretch
+                                machines.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="facility-card">
+                            <img src="Images/Gaming Loft.jpg" alt="Gaming Loft lounge" class="facility-image"
+                                loading="lazy">
+
+                            <h4>Gaming Loft</h4>
+                            <p>Pool tables, e-sports pods, basketball hoop shots, and air hockey duels for strategic
+                                fun.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="facility-card">
+                            <img src="Images/Music.jpg" alt="Entertainment and arts studio" class="facility-image"
+                                loading="lazy">
+
+                            <h4>Entertainment District</h4>
+                            <p>Theatre, dance studio, music studio, recording & composing suites, and art ateliers.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="facility-card">
+                            <img src="Images/Fashion .jpg" alt="Fashion and styling area" class="facility-image"
+                                loading="lazy">
+
+                            <h4>Fashion Closet</h4>
+                            <p>Runway fittings, styling racks, and content corners for personal branding experiments.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="facility-card">
+                            <img src="Images/Founder Meetup.jpeg" alt="Culinary Street food court"
+                                class="facility-image" loading="lazy">
+
+                            <h4>Culinary Street</h4>
+                            <p>Fuel stations, nutrition bars, and a buzzing food court designed for founder meetups.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="facility-card">
+                            <img src="Images/Copy of 208.jpg" alt="Collaborative coworking space" class="facility-image"
+                                loading="lazy">
+
+                            <h4>Collaborative Studios</h4>
+                            <p>Coworking decks, ideation pods, and investor-ready war rooms wired for GenAI
+                                collaboration.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="facility-card">
+                            <img src="Images/Swim.jpeg" alt="Recovery Wave swimming pool" class="facility-image"
+                                loading="lazy">
+
+                            <h4>Recovery Wave</h4>
+                            <p>Swimming pools, hydrotherapy, mindfulness lounges, and breathwork zones for reset.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="facility-highlight">
+                    <p><strong>SPINE Founder's Club</strong> plugs seamlessly into SNS Innovation Hub – every space is a
+                        springboard into startup deals, talent showcases, and wellbeing breakthroughs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule" class="section schedule-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Weekly Club Pulse</h2>
+                    <p class="section-subtitle">A rhythm balancing activation, acceleration, and recovery for
+                        founders-in-the-making.</p>
+                </div>
+                <div class="table-responsive">
+                    <table class="table schedule-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Day</th>
+                                <th scope="col">Morning Activation</th>
+                                <th scope="col">Afternoon Mastery</th>
+                                <th scope="col">Evening Community</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Monday</th>
+                                <td>Swim Sprints & Mobility Reset</td>
+                                <td>Design Thinking Studio: Opportunity Mapping</td>
+                                <td>Founder Circuit Run + Gratitude Huddle</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tuesday</th>
+                                <td>Strength & Stability Grind</td>
+                                <td>GenAI Playbooks for SHAAARP Industries</td>
+                                <td>Investor Café & Networking Scrimmage</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Wednesday</th>
+                                <td>Purpose Journaling & Mindful Yoga</td>
+                                <td>Industry Mentor Fireside (Healthcare & AgriTech)</td>
+                                <td>Gaming League + Creative Jam Sessions</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Thursday</th>
+                                <td>HIIT & Sprint Drills</td>
+                                <td>Innovation Sprint: Prototype to Pilot</td>
+                                <td>Community Impact Lab & Service Pop-Up</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Friday</th>
+                                <td>Breath Science & Visualization</td>
+                                <td>Pitch Studios • Storytelling for Investors</td>
+                                <td>Founder's Mixer with Industry Spotlight</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Weekend</th>
+                                <td>Trail Runs • Adventure Clinics</td>
+                                <td>Wellbeing Retreats & Character Missions</td>
+                                <td>Family Open House & Cultural Night</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section testimonials-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Voices from the Founder's Club</h2>
+                    <p class="section-subtitle">Network stories from students, mentors, and industry allies.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces"
+                                alt="Akhil, SNS Student Founder" class="testimonial-image" loading="lazy">
+                            <p>"SPINE: The Founder's Club is where our prototype pitches start – I can meet mentors
+                                after a
+                                swim set and close ideas over pool matches."</p>
+                            <span class="testimonial-name">Akhil, SNS Student Founder</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces"
+                                alt="Meera, SNS IHUB Coach" class="testimonial-image" loading="lazy">
+                            <p>"The physical hustle mirrors startup hustle. Teams bond over 5s football and walk
+                                straight
+                                into investor dialogues with sharper focus."</p>
+                            <span class="testimonial-name">Meera, SNS IHUB Coach</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces"
+                                alt="Karthik, SHAAARP Industry Mentor" class="testimonial-image" loading="lazy">
+                            <p>"As an industry partner, SPINE gives me a live talent radar. The culture of sincerity,
+                                nobility, and service is evident in every interaction."</p>
+                            <span class="testimonial-name">Karthik, SHAAARP Industry Mentor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="book-visit" class="section membership-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Choose Your Club Pathway</h2>
+                    <p class="section-subtitle">Tailored experiences for students, startups, institutions, and industry
+                        confidants.</p>
+                </div>
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-md-4">
+                        <div class="membership-card">
+                            <div class="membership-badge">Learners</div>
+                            <h3>Momentum Pass</h3>
+                            <p>All-access pass to sports, fitness, creator studios, and networking rituals.</p>
+                            <ul>
+                                <li>Personalised wellbeing diagnostics</li>
+                                <li>Founder's Club activation calendar</li>
+                                <li>Design thinking & GenAI clinics</li>
+                            </ul>
+                            <a class="btn btn-outline-primary" href="#contact-us">Enquire</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="membership-card membership-card--highlight">
+                            <div class="membership-badge">Startups</div>
+                            <h3>Venture Sprint</h3>
+                            <p>Residency programs that align wellbeing sprints with product-market fit breakthroughs.
+                            </p>
+                            <ul>
+                                <li>Dedicated coworking and war rooms</li>
+                                <li>Investor cafés & strategy councils</li>
+                                <li>SHAAARP immersion briefs</li>
+                            </ul>
+                            <a class="btn btn-primary" href="#contact-us">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="membership-card">
+                            <div class="membership-badge">Alliances</div>
+                            <h3>Alliance Lab</h3>
+                            <p>Co-create SPINE-inspired clubs with our design thinking evangelists and wellbeing
+                                architects.
+                            </p>
+                            <ul>
+                                <li>Blueprinting & culture design</li>
+                                <li>Faculty and mentor upskilling</li>
+                                <li>Shared innovation infrastructure</li>
+                            </ul>
+                            <a class="btn btn-outline-primary" href="#contact-us">Collaborate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header text-center text-lg-start fade-up">
+                    <h2 class="section-title text-white">Connect with <span class="text-gradient-spine">SPINE</span>
+                        Guides</h2>
+                    <p class="section-subtitle text-light">Co-create founder lifestyles, network residencies, and
+                        venture-ready wellbeing journeys.</p>
+                </div>
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-5 fade-up">
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-location-dot"></i>
+                                <div>
+                                    <h4>Visit the Hub</h4>
+                                    <p>SPINE: The Founder's Club, SNS Institutions, Coimbatore, Tamil Nadu, India</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Call</h4>
+                                    <p>+91 9486322337</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope-open-text"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>info@snsspine.in</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Timings</h4>
+                                    <p>6:00 AM – 8:00 PM • Monday to Saturday </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 fade-up" style="transition-delay: 0.2s;">
+                        <div class="map-wrapper">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23899.296969389325!2d77.02397649849046!3d11.095244450352137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8f954a8e34b79%3A0x5d6fd5800c29d86b!2sSPINE%20the%20SNS%20Activity%20Center!5e1!3m2!1sen!2sin!4v1769053304351!5m2!1sen!2sin"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CONTACT PAGE VIEW SECTION -->
+    <div id="contact-page-view">
+        <div id="contact-us" style="position: absolute; top: 0;"></div>
+        <header class="breadcrumb-header">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ul class="breadcrumb-nav">
+                        <li><a href="#home">Home</a></li>
+                        <li class="breadcrumb-sep">/</li>
+                        <li class="breadcrumb-active">Contact Us & Apply</li>
+                    </ul>
+                </nav>
+                <h1 class="fade-up">Contact Us & Apply</h1>
+                <p class="text-light opacity-75 mb-0">Start your journey with us today.</p>
+            </div>
+        </header>
+
+        <main class="contact-content-view">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6">
+                        <h2 class="section-title">Get In Touch</h2>
+                        <div class="info-item-v2">
+                            <div class="info-icon-v2"><i class="fas fa-location-dot"></i></div>
+                            <div class="info-detail">
+                                <h4>Address</h4>
+                                <p>SNS Kalvi Nagar, Sathy Main Road (Opp. CRI Pumps), Kurumbapalayam (Po), S.S.Kulam
+                                    (via), Coimbatore - 641 107.</p>
+                            </div>
+                        </div>
+                        <div class="info-item-v2">
+                            <div class="info-icon-v2"><i class="fas fa-phone"></i></div>
+                            <div class="info-detail">
+                                <h4>Phone</h4>
+                                <p>+91 9486322337</p>
+                            </div>
+                        </div>
+                        <div class="info-item-v2">
+                            <div class="info-icon-v2"><i class="fas fa-envelope"></i></div>
+                            <div class="info-detail">
+                                <h4>Email</h4>
+                                <p>General: office@snsbschool.in</p>
+                                <p>Career: job@snsgroups.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item-v2">
+                            <div class="info-icon-v2"><i class="fas fa-clock"></i></div>
+                            <div class="info-detail">
+                                <h4>Visit Us</h4>
+                                <p>6:00 AM – 8:00 PM • Monday to Saturday </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-container-v2">
+                            <script data-b24-form="inline/30/uqcs3u" data-skip-moving="true">
+                                (function (w, d, u) {
+                                    var s = d.createElement('script');
+                                    s.async = true;
+                                    s.src = u + '?' + (Date.now() / 180000 | 0);
+                                    var h = d.getElementsByTagName('script')[0];
+                                    h.parentNode.insertBefore(s, h);
+                                })(window, document, 'https://cdn.bitrix24.com/b11752903/crm/form/loader_30.js');
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center g-3">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="footer-copy">©2026 SNS Spine. Sincerity •
+                        Nobility • Service.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-links">
+                        <a href="https://snsspine.in/" target="_blank" rel="noopener">Official Site</a>
+                        <a href="https://snsihub.in/" target="_blank" rel="noopener">SNS IHUB</a>
+                        <a href="#book-visit">Plan a Visit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-widgets">
+        <a href="https://wa.me/919566423456" class="float-btn float-whatsapp" target="_blank" rel="noopener"
+            aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/snsinstitutions/" class="float-btn float-instagram" target="_blank"
+            rel="noopener" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script>
+        /**
+         * SPINE: The Founder's Club JavaScript
+         * Interactivity, animation, and experience choreography
+         */
+
+        const navbar = document.getElementById('mainNav');
+        const collisionsCounter = document.getElementById('stat-collisions');
+        const contactForm = document.getElementById('contactForm');
+        const sections = document.querySelectorAll('section[id]');
+
+        /**
+         * Initialise core behaviours when DOM is ready
+         */
+        document.addEventListener('DOMContentLoaded', () => {
+            initNavbarScroll();
+            initCounterAnimation();
+            initFormHandler();
+            initScrollSpy();
+            initFadeInAnimations();
+            initSmoothScrolling();
+            initHeroParallax();
+            handleRouting();
+        });
+
+        /**
+         * Enhanced Routing & Navigation
+         */
+        function handleRouting() {
+            const hash = window.location.hash || '#home';
+            const homeView = document.getElementById('main-page-view');
+            const contactView = document.getElementById('contact-page-view');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            if (hash === '#contact-us') {
+                homeView.style.display = 'none';
+                contactView.style.display = 'block';
+                navbar.classList.add('navbar-scrolled');
+                window.scrollTo(0, 0);
+            } else {
+                homeView.style.display = 'block';
+                contactView.style.display = 'none';
+                if (hash !== '#home') {
+                    const target = document.querySelector(hash);
+                    if (target) {
+                        const offset = 90;
+                        const bodyRect = document.body.getBoundingClientRect().top;
+                        const elementRect = target.getBoundingClientRect().top;
+                        const elementPosition = elementRect - bodyRect;
+                        const offsetPosition = elementPosition - offset;
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }
+                } else {
+                    window.scrollTo(0, 0);
+                }
+            }
+
+            // Sync Nav Active State
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === hash) link.classList.add('active');
+                else link.classList.remove('active');
+            });
+        }
+
+        window.addEventListener('hashchange', handleRouting);
+
+        /**
+         * Navbar behaviour on scroll (sticky + hide on downward scroll)
+         */
+        function initNavbarScroll() {
+            if (!navbar) return;
+
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                // Always Show Header (Removed Hide on Downward Scroll)
+                navbar.style.transform = 'translateY(0)';
+
+                // Apply Glassmorphism after initial scroll or if on contact page
+                if (scrollTop > 40 || window.location.hash === '#contact-us') {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+
+                lastScrollTop = scrollTop;
+            });
+        }
+
+        /**
+         * Animate primary stats once visible
+         */
+        function initCounterAnimation() {
+            if (!collisionsCounter) return;
+
+            const targetNumber = 52; // weekly industry collisions
+            const duration = 2800;
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const startTime = performance.now();
+
+                        function updateCounter(now) {
+                            const elapsed = now - startTime;
+                            const progress = Math.min(elapsed / duration, 1);
+                            const easeOut = 1 - Math.pow(1 - progress, 4);
+                            const current = Math.floor(easeOut * targetNumber);
+                            collisionsCounter.textContent = current;
+
+                            if (progress < 1) {
+                                requestAnimationFrame(updateCounter);
+                            }
+                        }
+
+                        requestAnimationFrame(updateCounter);
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.4 });
+
+            observer.observe(collisionsCounter);
+        }
+
+        /**
+         * Form handling with validation feedback
+         */
+        function initFormHandler() {
+            if (!contactForm) return;
+
+            contactForm.addEventListener('submit', event => {
+                event.preventDefault();
+
+                if (!contactForm.checkValidity()) {
+                    contactForm.classList.add('was-validated');
+                    showNotification('Let’s fine-tune the form. Kindly complete the highlighted fields.', 'warning');
+                    return;
+                }
+
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+
+                const formData = new FormData(contactForm);
+                const payload = {};
+                formData.forEach((value, key) => {
+                    payload[key] = value;
+                });
+
+                // Simulate async submission – integrate with API endpoint if provided
+                setTimeout(() => {
+                    showNotification('Your Founder\'s Club request is received. Our guides will connect shortly.', 'success');
+                    contactForm.reset();
+                    contactForm.classList.remove('was-validated');
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, 1600);
+            });
+        }
+
+        /**
+         * Scroll spy to highlight active navigation link
+         */
+        function initScrollSpy() {
+            const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+            if (!navLinks.length) return;
+
+            window.addEventListener('scroll', () => {
+                let currentSection = '';
+
+                sections.forEach(section => {
+                    const offsetTop = section.offsetTop - 120;
+                    if (window.pageYOffset >= offsetTop) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === `#${currentSection}`);
+                });
+            });
+        }
+
+        /**
+         * Fade-in animation intersection observer
+         */
+        function initFadeInAnimations() {
+            const animatedElements = document.querySelectorAll(
+                '.blueprint-card, .program-card, .culture-highlight, .timeline-node, .pillar-card, .facility-card, .testimonial-card, .membership-card'
+            );
+
+            if (!animatedElements.length) return;
+
+            animatedElements.forEach(element => element.classList.add('fade-in'));
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2,
+                rootMargin: '0px 0px -60px 0px'
+            });
+
+            animatedElements.forEach(element => observer.observe(element));
+        }
+
+        /**
+         * Smooth scrolling for anchor links
+         */
+        function initSmoothScrolling() {
+            const links = document.querySelectorAll('a[href^="#"]');
+
+            links.forEach(link => {
+                link.addEventListener('click', event => {
+                    const targetId = link.getAttribute('href');
+                    if (!targetId || targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (!targetElement) return;
+
+                    event.preventDefault();
+
+                    // Update hash which triggers handleRouting
+                    if (window.location.hash !== targetId) {
+                        window.location.hash = targetId;
+                        // Manually trigger for Bitrix frames where hashchange might be restricted
+                        handleRouting();
+                    } else {
+                        // Already on the right hash, just scroll
+                        const offsetTop = targetElement.offsetTop - 90;
+                        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                    }
+
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse && navbarCollapse.classList.contains('show') && typeof bootstrap !== 'undefined') {
+                        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse);
+                        bsCollapse.hide();
+                    }
+                });
+            });
+        }
+
+        /**
+         * Hero parallax effect on scroll
+         */
+        function initHeroParallax() {
+            const heroSection = document.querySelector('.hero-section');
+            const heroVisual = document.querySelector('.hero-visual-container');
+            if (!heroSection || !heroVisual) return;
+
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const limit = heroSection.offsetHeight;
+                if (scrolled <= limit) {
+                    heroVisual.style.transform = `translateY(${scrolled * 0.1}px)`;
+                }
+            });
+        }
+
+        /**
+         * Notification surface for user feedback
+         */
+        function showNotification(message, type = 'info') {
+            const existing = document.querySelector('.notification');
+            if (existing) existing.remove();
+
+            const wrapper = document.createElement('div');
+            wrapper.className = `notification notification-${type}`;
+            wrapper.innerHTML = `
+        <div class="notification-content">
+            <i class="fas fa-${iconForType(type)}"></i>
+            <span>${message}</span>
+            <button class="notification-close" aria-label="Close notification">&times;</button>
+        </div>
+    `;
+
+            applyNotificationStyles(wrapper, type);
+
+            document.body.appendChild(wrapper);
+
+            requestAnimationFrame(() => {
+                wrapper.style.transform = 'translateX(0)';
+                wrapper.style.opacity = '1';
+            });
+
+            const closeBtn = wrapper.querySelector('.notification-close');
+            closeBtn.addEventListener('click', () => dismissNotification(wrapper));
+            setTimeout(() => dismissNotification(wrapper), 5200);
+        }
+
+        function iconForType(type) {
+            switch (type) {
+                case 'success': return 'check-circle';
+                case 'warning': return 'triangle-exclamation';
+                case 'danger': return 'circle-xmark';
+                default: return 'info-circle';
+            }
+        }
+
+        function applyNotificationStyles(notification, type) {
+            const palette = {
+                success: '#16a34a',
+                warning: '#f97316',
+                danger: '#dc2626',
+                info: '#2563eb'
+            };
+
+            notification.style.cssText = `
+        position: fixed;
+        top: 24px;
+        right: 24px;
+        max-width: 420px;
+        width: calc(100% - 48px);
+        background: ${palette[type] || palette.info};
+        color: #ffffff;
+        padding: 1rem 1.25rem;
+        border-radius: 16px;
+        box-shadow: 0 20px 45px -25px rgba(13, 21, 38, 0.65);
+        z-index: 1050;
+        transform: translateX(360px);
+        opacity: 0;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+    `;
+
+            const content = notification.querySelector('.notification-content');
+            const closeBtn = notification.querySelector('.notification-close');
+
+            content.style.cssText = `
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        font-weight: 600;
+    `;
+
+            closeBtn.style.cssText = `
+        background: rgba(255, 255, 255, 0.18);
+        border: none;
+        color: #ffffff;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        font-size: 1.1rem;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+        transition: background 0.2s ease;
+    `;
+
+            closeBtn.addEventListener('mouseenter', () => {
+                closeBtn.style.background = 'rgba(255, 255, 255, 0.32)';
+            });
+
+            closeBtn.addEventListener('mouseleave', () => {
+                closeBtn.style.background = 'rgba(255, 255, 255, 0.18)';
+            });
+        }
+
+        function dismissNotification(notification) {
+            if (!notification) return;
+            notification.style.transform = 'translateX(360px)';
+            notification.style.opacity = '0';
+            setTimeout(() => notification.remove(), 350);
+        }
+
+        /**
+         * Helper to update current year in footer
+         */
+        function setCurrentYear() {
+            const yearHolder = document.getElementById('currentYear');
+            if (yearHolder) {
+                yearHolder.textContent = new Date().getFullYear();
+            }
+        }
+
+        /**
+         * Debounce utility (reserved for future scroll-intensive features)
+         */
+        function debounce(fn, wait = 16) {
+            let timeout;
+            return function debounced(...args) {
+                const later = () => {
+                    timeout = null;
+                    fn.apply(this, args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        /**
+         * Bitrix Form Placeholder Synchronization
+         * Ensures form fields look like the custom theme
+         */
+        function applyBitrixPlaceholders() {
+            const fields = document.querySelectorAll('.b24-form-field');
+            if (fields.length === 0) return;
+
+            fields.forEach(function (field) {
+                const label = field.querySelector('.b24-form-control-label');
+                const input = field.querySelector('.b24-form-control, .b24-form-control-select');
+                if (!label || !input) return;
+
+                if (!input.placeholder || input.placeholder === "") {
+                    const text = label.textContent.replace(/\s*\*$/, '').trim();
+                    const required = label.textContent.includes('*');
+                    input.placeholder = required ? text + ' *' : text;
+
+                    // Force a small delay to ensure Bitrix doesn't overwrite it immediately
+                    if (input.tagName === 'INPUT') {
+                        input.setAttribute('placeholder', input.placeholder);
+                    }
+                }
+            });
+        }
+
+        const bitrixObserver = new MutationObserver((mutations) => {
+            applyBitrixPlaceholders();
+        });
+
+        bitrixObserver.observe(document.body, { childList: true, subtree: true });
+
+        // Multiple checks during the first few seconds of load
+        [500, 1500, 3000, 5000].forEach(delay => {
+            setTimeout(applyBitrixPlaceholders, delay);
+        });
+
+    </script>
+</body>
+
+</html>
